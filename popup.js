@@ -8,7 +8,7 @@ let mousePos = { x: -1000, y: -1000};
 let lastX = -1000;
 let lastY = -1000;
 
-function spawnImage(x, y) {
+function spawnimage(x, y) {
   if (lastX === x && lastY === y) {
     return
   }
@@ -30,7 +30,7 @@ function spawnImage(x, y) {
 
 function repeater() {
   setTimeout(function () {
-    spawnImage(mousePos.x, mousePos.y);
+    spawnimage(mousePos.x, mousePos.y);
     repeater();
   }, 10);
 }
@@ -50,7 +50,7 @@ function removeImage() {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
-  spawnImage(mousePos.x, mousePos.y);
+  spawnimage(mousePos.x, mousePos.y);
   repeater();
   removeImage();
 });
