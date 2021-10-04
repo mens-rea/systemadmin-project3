@@ -19,9 +19,9 @@ function spawnimage(x, y) {
   var image = document.createElement('img');
   image.setAttribute('src', './circle.png');
   image.setAttribute('class', 'overlays');
-  image.setAttribute('width', 128);
-  image.setAttribute('height', 128);
-  image.style.left = x - 64 + 'px';
+  image.setAttribute('width', 64);
+  image.setAttribute('height', 64);
+  image.style.left = x - 32 + 'px';
   image.style.top = y - 64 + 'px';
   images.push(image);
   document.body.appendChild(image);
@@ -35,7 +35,7 @@ function repeater() {
   }, 10);
 }
 
-document.addEventListener('mousemove', function(e) { 
+document.addEventListener('mousemove', function(e) {
     mousePos.x = e.pageX;
     mousePos.y = e.pageY;
 });
@@ -49,7 +49,7 @@ function removeImage() {
   }, 20);
 }
 
-document.addEventListener('DOMContentLoaded', function(event) { 
+document.addEventListener('DOMContentLoaded', function(event) {
   spawnimage(mousePos.x, mousePos.y);
   repeater();
   removeImage();
