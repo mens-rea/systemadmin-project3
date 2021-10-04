@@ -3,10 +3,10 @@
 let images = [];
 
 // Store mouse position
-let mousePos = { x: -500, y: -500};
+let mousePos = { x: -400, y: -400};
 
-let lastX = -500;
-let lastY = -500;
+let lastX = -400;
+let lastY = -400;
 
 function spawnimage(x, y) {
   if (lastX === x && lastY === y) {
