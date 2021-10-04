@@ -8,6 +8,7 @@ let mousePos = { x: -500, y: -500};
 let lastX = -500;
 let lastY = -500;
 
+
 function spawnimage(x, y) {
   if (lastX === x && lastY === y) {
     return
@@ -23,6 +24,7 @@ function spawnimage(x, y) {
   image.setAttribute('height', 64);
   image.style.left = x - 64 + 'px';
   image.style.top = y - 64 + 'px';
+
   images.push(image);
   document.body.appendChild(image);
 }
