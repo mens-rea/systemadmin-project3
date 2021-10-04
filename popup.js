@@ -17,12 +17,12 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './polka.png'); // Replaced circle.png to polka.png
   image.setAttribute('class', 'overlays');
-  image.setAttribute('width', 128);
-  image.setAttribute('height', 128);
-  image.style.left = x - 64 + 'px';
-  image.style.top = y - 64 + 'px';
+  image.setAttribute('width', 64);
+  image.setAttribute('height', 64);
+  image.style.left = x - 0 + 'px';
+  image.style.top = y - 0 + 'px';
   images.push(image);
   document.body.appendChild(image);
 }
