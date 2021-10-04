@@ -3,10 +3,10 @@
 let images = [];
 
 // Store mouse position
-let mousePos = { x: -1000, y: -1000};
+let mousePos = { x: -152, y: -152};
 
-let lastX = -1000;
-let lastY = -1000;
+let lastX = -152;
+let lastY = -152;
 
 function spawnimage(x, y) {
   if (lastX === x && lastY === y) {
@@ -17,10 +17,10 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './soccer-ball-variant.png');
   image.setAttribute('class', 'overlays');
-  image.setAttribute('width', 128);
-  image.setAttribute('height', 128);
+  image.setAttribute('width', 64);
+  image.setAttribute('height', 64);
   image.style.left = x - 64 + 'px';
   image.style.top = y - 64 + 'px';
   images.push(image);
