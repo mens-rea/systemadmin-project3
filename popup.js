@@ -8,7 +8,7 @@ let mousePos = { x: -1000, y: -1000};
 let lastX = -1000;
 let lastY = -1000;
 
-function spawnimage(x, y) {
+function spawnImage(x, y) {
   if (lastX === x && lastY === y) {
     return
   }
@@ -16,13 +16,13 @@ function spawnimage(x, y) {
   lastX = x;
   lastY = y;
 
-  var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  const image = document.createElement('img');
+  image.setAttribute('src', './react.png');
   image.setAttribute('class', 'overlays');
-  image.setAttribute('width', 128);
-  image.setAttribute('height', 128);
-  image.style.left = x - 64 + 'px';
-  image.style.top = y - 64 + 'px';
+  image.setAttribute('width', 64);
+  image.setAttribute('height', 64);
+  image.style.left = x - 16 + 'px';
+  image.style.top = y - 32 + 'px';
   images.push(image);
   document.body.appendChild(image);
 }
@@ -30,7 +30,7 @@ function spawnimage(x, y) {
 
 function repeater() {
   setTimeout(function () {
-    spawnimage(mousePos.x, mousePos.y);
+    spawnImage(mousePos.x, mousePos.y);
     repeater();
   }, 10);
 }
@@ -50,7 +50,7 @@ function removeImage() {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
-  spawnimage(mousePos.x, mousePos.y);
+  spawnImage(mousePos.x, mousePos.y);
   repeater();
   removeImage();
 });
