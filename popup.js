@@ -46,7 +46,7 @@ function removeImage() {
       images.shift().remove();
     }
     removeImage();
-  }, 20);
+  }, 10);
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
