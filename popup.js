@@ -17,7 +17,7 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './square.jpg');
   image.setAttribute('class', 'overlays');
   image.setAttribute('width', 128);
   image.setAttribute('height', 128);
@@ -27,13 +27,6 @@ function spawnimage(x, y) {
   document.body.appendChild(image);
 }
 
-
-function repeater() {
-  setTimeout(function () {
-    spawnimage(mousePos.x, mousePos.y);
-    repeater();
-  }, 10);
-}
 
 document.addEventListener('mousemove', function(e) { 
     mousePos.x = e.pageX;
