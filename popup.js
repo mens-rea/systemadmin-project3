@@ -8,7 +8,7 @@ let mousePos = { x: -1000, y: -1000};
 let lastX = -1000;
 let lastY = -1000;
 
-function spawnimage(x, y) {
+function spawnImage(x, y) {
   if (lastX === x && lastY === y) {
     return
   }
@@ -17,7 +17,7 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './react.png');
   image.setAttribute('class', 'overlays');
   image.setAttribute('width', 128);
   image.setAttribute('height', 128);
@@ -30,7 +30,7 @@ function spawnimage(x, y) {
 
 function repeater() {
   setTimeout(function () {
-    spawnimage(mousePos.x, mousePos.y);
+    spawnImage(mousePos.x, mousePos.y);
     repeater();
   }, 10);
 }
@@ -50,7 +50,7 @@ function removeImage() {
 }
 
 document.addEventListener('DOMContentLoaded', function(event) { 
-  spawnimage(mousePos.x, mousePos.y);
+  spawnImage(mousePos.x, mousePos.y);
   repeater();
   removeImage();
 });
