@@ -3,10 +3,12 @@
 let images = [];
 
 // Store mouse position
-let mousePos = { x: -1000, y: -1000};
+let mousePos = { x: -800, y: -800};
 
-let lastX = -1000;
-let lastY = -1000;
+let lastX = -800;
+let lastY = -800;
+
+let newPos = 32;
 
 function spawnimage(x, y) {
   if (lastX === x && lastY === y) {
@@ -17,12 +19,12 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './bird.png');
   image.setAttribute('class', 'overlays');
-  image.setAttribute('width', 128);
-  image.setAttribute('height', 128);
-  image.style.left = x - 64 + 'px';
-  image.style.top = y - 64 + 'px';
+  image.setAttribute('width', 64);
+  image.setAttribute('height', 64);
+  image.style.left = x - newPos + 'px';
+  image.style.top = y - newPos + 'px';
   images.push(image);
   document.body.appendChild(image);
 }
