@@ -17,7 +17,7 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './emoticon.png');
   image.setAttribute('class', 'overlays');
   image.setAttribute('width', 128);
   image.setAttribute('height', 128);
