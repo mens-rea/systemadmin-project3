@@ -17,7 +17,7 @@ function spawnimage(x, y) {
   lastY = y;
 
   var image = document.createElement('img');
-  image.setAttribute('src', './circle.png');
+  image.setAttribute('src', './img1.png');
   image.setAttribute('class', 'overlays');
   image.setAttribute('width', 128);
   image.setAttribute('height', 128);
@@ -35,7 +35,7 @@ function repeater() {
   }, 10);
 }
 
-document.addEventListener('mousemove', function(e) { 
+document.addEventListener('mousemove', function(e) {
     mousePos.x = e.pageX;
     mousePos.y = e.pageY;
 });
@@ -49,7 +49,7 @@ function removeImage() {
   }, 20);
 }
 
-document.addEventListener('DOMContentLoaded', function(event) { 
+document.addEventListener('DOMContentLoaded', function(event) {
   spawnimage(mousePos.x, mousePos.y);
   repeater();
   removeImage();
